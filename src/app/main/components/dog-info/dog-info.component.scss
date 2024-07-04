@@ -1,0 +1,43 @@
+@import '../../../../assets/styles/colors.scss';
+
+.dog-info-wrapper {
+  .dog-info-header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    background: linear-gradient(90deg,
+        rgba(67, 101, 139, 1) 0%,
+        rgba(67, 101, 139, 1) 35%,
+        rgba(121, 151, 185, 1) 100%);
+    color: $secondary-title-color;
+    width: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    .icon-close {
+      margin-left: auto;
+      cursor: pointer;
+      height: 20px;
+    }
+  }
+
+  .dog-info-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .dog-info-item{
+      display: flex;
+      align-items: center;
+      .circle {
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: $background-color;
+        margin-right: 5px;
+      }
+    }
+
+  }
+}

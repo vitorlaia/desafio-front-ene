@@ -1,0 +1,11 @@
+<mat-card class="dog-card" appearance="outlined" (click)="openMoreInfo()">
+    <mat-card-header>
+      <mat-card-title>{{dogGridInfo.breeds[0].name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="image" [src]="dogGridInfo.url" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{dogGridInfo.breeds[0].temperament}}
+      </p>
+    </mat-card-content>
+</mat-card>

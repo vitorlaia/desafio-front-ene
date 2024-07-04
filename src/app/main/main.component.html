@@ -1,0 +1,24 @@
+<main class="main-wrapper">
+    <header class="main-header-wrapper">
+        <div class="main-header-title">
+            <span class="title">
+                Dogs Show!
+            </span>
+            <span class="sub-title">
+                Here you can see information about puppies!
+            </span>
+        </div>
+    </header>
+
+    <body class="main-body-wrapper">
+        <div class="loading" *ngIf="loading">
+            <mat-spinner></mat-spinner>
+            <span>Loading...</span>
+        </div>
+        <div class="dog-grid" *ngIf="!loading">
+            <grid *ngFor="let dogGridInfo of dogGridInfos"
+                [dogGridInfo]="dogGridInfo">                
+            </grid>
+        </div>
+    </body>
+</main>

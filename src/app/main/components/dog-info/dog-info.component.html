@@ -1,0 +1,32 @@
+<div class="dog-info-wrapper">
+    <div class="dog-info-header" >
+      <span>{{data.dogInfo? data.dogInfo.name : 'No dog available'}}</span>
+      <img src="assets/icons/close.svg" (click)="close()" class="icon-close">
+    </div>
+    <div class="dog-info-body">
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Origin: {{data.dogInfo? data.dogInfo.origin : '-'}}
+        </div>
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Weight: {{data.dogInfo? data.dogInfo.weight.metric : '-'}} m
+        </div>
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Height: {{data.dogInfo? data.dogInfo.weight.metric  : '-'}} m
+        </div>
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Life span: {{data.dogInfo? data.dogInfo.life_span  : '-'}}
+        </div>
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Bred for: {{data.dogInfo? data.dogInfo.bred_for  : '-'}}
+        </div>
+        <div class="dog-info-item">
+            <span class="circle"></span>
+            Bred group: {{data.dogInfo? data.dogInfo.breed_group  : '-'}}
+        </div>
+    </div>
+</div>

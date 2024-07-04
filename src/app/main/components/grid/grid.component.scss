@@ -1,0 +1,66 @@
+@import './../../../../assets/styles/colors.scss';
+@import '../../../../../node_modules/bootstrap/scss/mixins';
+@import '../../../../../node_modules/bootstrap/scss/functions';
+@import '../../../../../node_modules/bootstrap/scss/variables';
+
+
+.dog-card {
+  max-width: 176px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include media-breakpoint-up(xl) {
+    max-width: inherit;
+  }
+
+  .mat-mdc-card-header{
+    background-color: $background-card-header-color;
+    color: $secondary-subtitle-color;
+    padding: 8px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-mdc-card-subtitle~.mat-mdc-card-title,
+  .mat-mdc-card-title~.mat-mdc-card-subtitle,
+  .mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-title,
+  .mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-subtitle,
+  .mat-mdc-card-title-group .mat-mdc-card-title,
+  .mat-mdc-card-title-group .mat-mdc-card-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .image {
+    height: 120px;
+  }
+  .mat-mdc-card-content:last-child{
+    padding-top: 16px;
+    p{
+      font-size: 0.9rem;
+      max-height: 120px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: $scroll-color;
+        border-radius: 30px;
+        border: 0px solid $scroll-color;
+      }
+    
+      &::-webkit-scrollbar-track {
+        background: $scroll-background-color;
+        border-radius: 0;
+        box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+        border: 0px solid $scroll-background-color;
+      }
+    }
+  }
+}
